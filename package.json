@@ -1,0 +1,30 @@
+{
+  "name": "moviefinder",
+  "version": "1.0.0",
+  "description": "This is a class project to create a website that provides a clean interface for looking up where to watch a piece of media. Simply search a show and it will tell you where. Relies on Watchmode API",
+  "homepage": "https://github.com/Nyxterius/MovieFinder#readme",
+  "bugs": {
+    "url": "https://github.com/Nyxterius/MovieFinder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nyxterius/MovieFinder.git"
+  },
+  "license": "ISC",
+  "author": "Logan Haislip",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e '*'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.88.0",
+    "body-parser": "^2.2.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "gridjs": "^6.2.0",
+    "http": "^0.0.1-security",
+    "nodemon": "^3.1.11"
+  }
+}
