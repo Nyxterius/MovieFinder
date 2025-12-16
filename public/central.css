@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(220, 173, 255);
+}
+
+#titlename {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+
+#mainnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1%;
+    background-color: rgb(242, 219, 255);
+    display: flex;
+    text-align: center;
+    border: 3px solid rgb(80, 0, 145);
+    justify-content: center;
+    gap: 10%;
+    font-size: larger;
+}
+
+#mannav ul li{
+    padding: 8%;
+    margin: 10%;
+    text-align: center;
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white
+}
+
+#mainnav ul li a:hover{
+    background-color: rgb(168, 255, 168);
+}
+
+#audiv {
+    margin-top: 2%;
+    border: 2px black solid;
+    float: right;
+}
