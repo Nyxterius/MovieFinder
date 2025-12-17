@@ -1,11 +1,16 @@
 body{
-    background-color: rgb(220, 173, 255);
+    background-color: rgb(161, 38, 255);
 }
 
 #titlename {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: oblique;
+}
+
+#mainnav {
+    margin-left: 18%;
+    margin-right: 18%;
 }
 
 #mainnav ul {
@@ -15,10 +20,11 @@ body{
     background-color: rgb(242, 219, 255);
     display: flex;
     text-align: center;
-    border: 3px solid rgb(80, 0, 145);
     justify-content: center;
-    gap: 10%;
+    gap: 25%;
     font-size: larger;
+    border: rgb(69, 0, 104) solid 5px;
+    border-radius: 20px;
 }
 
 #mannav ul li{
@@ -38,4 +44,53 @@ body{
     margin-top: 2%;
     border: 2px black solid;
     float: right;
+}
+
+#searchdiv {
+    align-content: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#searchbar {
+    width: 100%
+}
+
+#searchtitle {
+    text-align: center;
+}
+
+#searchsubmit {
+    margin-left:45%;
+    margin-right:45%;
+    padding: 2%;
+    width: auto;
+    height: auto;
+    font-size: larger;
+    border: black solid 2px;
+    border-radius: 20px;
+}
+
+#searchbar {
+    font-size: x-large;
+    height: 7%;
+    outline: 0;
+    background: whitesmoke;
+    padding: 0 1.6rem;
+    border-radius: 10px;
+    appearance: none; 
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+}
+
+#bodynav {
+    border: solid black 3px;
+    border-radius: 15px;
+    background: whitesmoke;
+    margin-inline: 5%;
+    text-align: center;
+    padding-inline: 5%;
 }
