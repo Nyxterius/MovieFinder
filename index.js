@@ -19,19 +19,19 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 let watchmode = process.env.WATCHMODE_KEY;
 
-app.get('/', (req, res) => {
-  res.sendFile('public/homepage.html', { root: __dirname });
+app.get('/public', async (req, res) => {
+  res.sendFile('/homepage.html', { root: __dirname });
 });
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
 
-async function searchContent() {
-    var searchValue = document.getElementById('searchbar').value
-    await fetch(`https://api.watchmode.com/v1/search/?apiKey=${watchmode}&search_field=name&search_value=${encodeURIComponent(searchValue)}`)
-    .then((results) => results.json())
-    .then((results) => {
-        console.log(results)
-    })
-}
+// async function searchContent() {
+//     var searchValue = document.getElementById('searchbar').value
+//     await fetch(`https://api.watchmode.com/v1/search/?apiKey=${watchmode}&search_field=name&search_value=${encodeURIComponent(searchValue)}`)
+//     .then((results) => results.json())
+//     .then((results) => {
+//         console.log(results)
+//     })
+// }
