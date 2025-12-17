@@ -2,6 +2,7 @@
     <head>
         <title>Welcome to Movie Finder!</title>
         <link rel="stylesheet" href="central.css">
+        <script src="../index.js" defer></script> 
     </head>
     <body>
         <h1 id="titlename">Movie Finder</h1>
@@ -14,8 +15,8 @@
         </nav>
 
         <div id="searchdiv">
-            <form onsubmit="event.preventDefault();">
-                <label for="mediasearch" id="searchtitle"><h2>Search for a movie or TV show</h2></label>
+            <form onsubmit="event.preventDefault(); searchContent();">
+                <label for="searchbar" id="searchtitle"><h2>Search for a movie or TV show</h2></label>
                 <br>
                 <input type="text" name="mediasearch" id="searchbar">
                 <br>
