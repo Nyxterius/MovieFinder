@@ -8,6 +8,7 @@ To run this project, you can take a look at the prerequisites on `index.js`. The
  - Node.js
  - ExpressJS
  - GridJS
+ - watchmode/api-client
  - nodemon
  - body-parser
  - supabase
