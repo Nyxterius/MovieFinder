@@ -33,6 +33,41 @@ app.post('/searchcontent', async (req, res) => {
   })
 })
 
+app.post('/loadrespage', async (req, res) => {
+  const titleID = req.body.titleID;
+  const output = await fetch(`https://api.watchmode.com/v1/title/${titleID}/details/?apiKey=${watchmode}`)
+  .then((results) => results.json())
+  .then((results) => {
+    res.send(results)
+    return;
+  })
+})
+
+app.post('/respageelem', async (req, res) => {
+  const titleID = req.body.titleID;
+  const titleName = req.body.titleName;
+  const coverArt = req.body.coverArt;
+
+  const { data, error } = await supabase
+    .from('respageelem')
+    .insert({
+      title_id: titleID,
+      title_name: titleName,
+      cover_art: coverArt,
+    })
+    .select()
+  res.send(req.body);
+})
+
+app.get('/getlast', async (req, res) => {
+  const { data, error } = await supabase.from('respageelem')
+  .select('title_id, title_name, cover_art')
+  .limit(1)
+  .order('id', {ascending:false})
+  res.send(data)
+  return;
+})
+
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

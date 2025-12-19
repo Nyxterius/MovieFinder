@@ -1,11 +1,15 @@
 body{
     background-color: rgb(161, 38, 255);
+    background-image: url('background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #titlename {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: oblique;
+    color: lavender;
 }
 
 #mainnav {
@@ -59,6 +63,7 @@ body{
 
 #searchtitle {
     text-align: center;
+    color: lavender;
 }
 
 #searchsubmit {
@@ -93,4 +98,12 @@ body{
     margin-inline: 5%;
     text-align: center;
     padding-inline: 5%;
+}
+
+#searchsubmit:hover {
+    background-color:rgb(75, 186, 151);
+}
+
+h1 {
+    color: lavender;
 }
