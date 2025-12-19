@@ -107,3 +107,25 @@ body{
 h1 {
     color: lavender;
 }
+
+#sourcetable {
+    color: lavender;
+    width: 30%;
+    float: right;
+    display: inline;
+}
+
+#watchedbutton {
+    float: left;
+    display: inline-start;
+    justify-self: center;
+    width: auto;
+    height: auto;
+    font-size: larger;
+    border: black solid 2px;
+    border-radius: 20px;
+}
+
+#watchedbutton:hover {
+    background-color: rgb(75, 186, 151);
+}

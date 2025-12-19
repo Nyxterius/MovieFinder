@@ -68,6 +68,30 @@ app.get('/getlast', async (req, res) => {
   return;
 })
 
+app.post('/getsources', async (req, res) => {
+  const titleID = req.body.titleID;
+  const output = await fetch(`https://api.watchmode.com/v1/title/${titleID}/sources/?apiKey=${watchmode}`)
+  .then((results) => results.json())
+  .then((results) => {
+    res.send(results)
+    return;
+  })
+})
+
+app.post('/addwatched', async (req, res) => {
+  const titlename = req.body.medianame;
+  const coverart = req.body.coverart;
+
+  const { data, error } = await supabase
+    .from('watched')
+    .insert({
+      title_name : titlename,
+      cover_art : coverart,
+    })
+    .select();
+  res.send(req.body);
+
+})
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
