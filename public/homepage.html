@@ -3,6 +3,7 @@
         <title>Welcome to Movie Finder!</title>
         <link rel="stylesheet" href="central.css">
         <script src="searchbase.js" defer></script>
+        <link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
     </head>
     <body>
         <h1 id="titlename">Movie Finder</h1>
@@ -24,5 +25,32 @@
                 <input type="submit" value="Find it!" id="searchsubmit">
             </form>
         </div>
+        
+        <div style="margin-left: 30%; margin-right: 30%; width: 40%; padding-bottom: 25%; align-self: center; float: right;" id="covercarousel" data-simple-slider></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+
+
+        <h2 id="titlename">A selection from the greatest movie ever made.</div>
+        <video
+            id="my-video"
+            class="video-js"
+            controls
+            preload="auto"
+            width="1280"
+            height="720"
+            
+            poster="MY_VIDEO_POSTER.jpg"
+            data-setup="{}"
+        >
+            <source src="Steamboat Willie.mp4" type="video/mp4" />
+            <p class="vjs-no-js">
+             To view this video please enable JavaScript, and consider upgrading to a
+              web browser that
+              <a href="https://videojs.com/html5-video-support/" target="_blank"
+               >supports HTML5 video</a
+            >
+            </p>
+        </video>
+        <script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
     </body>
 </html>

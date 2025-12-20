@@ -129,3 +129,9 @@ h1 {
 #watchedbutton:hover {
     background-color: rgb(75, 186, 151);
 }
+
+#my-video {
+    margin-left: 15%;
+    margin-right: 25%;
+    align-self: center;
+}

@@ -47,3 +47,24 @@ async function sendElements(results, results2) {
     window.location.href = "respage.html"
     return;
 }
+
+async function loadRecentTitles() {
+    await fetch('/getwatched')
+    .then((results) => results.json())
+    .then((results) => {
+        console.log("Creating carousel")
+        console.log(results)
+        for (link in results) {
+            var grimage = document.createElement('img')
+            var imglink = results[link]['cover_art'];
+            grimage.src = imglink;
+            grimage.alt = results[link]['title_name'];
+            grimage.style.height = "40%"
+            grimage.style.width = "14%"
+            document.getElementById('covercarousel').appendChild(grimage)
+        }
+    })
+    simpleslider.getSlider();
+}
+
+window.onload = loadRecentTitles; 

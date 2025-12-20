@@ -90,7 +90,15 @@ app.post('/addwatched', async (req, res) => {
     })
     .select();
   res.send(req.body);
+})
 
+app.get('/getwatched', async (req, res) => {
+  const { data, error } = await supabase.from('watched')
+  .select('title_name, cover_art')
+  .limit(10)
+  .order('id', {ascending:false})
+  res.send(data)
+  return;
 })
 
 app.listen(port, () => {

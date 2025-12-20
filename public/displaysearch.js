@@ -55,8 +55,10 @@ async function listSources(results) {
                 sourcelogo.src = "hulu.png"
             } else if (sourceName == 'Disney+') {
                 sourcelogo.src = "disney.png"
-            } else if (sourceName == 'Amazon') {
+            } else if (sourceName == 'Amazon' || sourceName == "Prime Video") {
                 sourcelogo.src = "amazon.png"
+            } else if (sourceName = 'MAX') {
+                sourcelogo.src = "hbo.png"
             } else if (sourceName == 'AppleTV') {
                 sourcelogo.src = "apple.png"
             } else {
